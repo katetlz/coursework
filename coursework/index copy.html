@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #myElement {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+
+<div id="myElement"></div>
+
+<script>
+  const element = document.getElementById('myElement');
+  let scaleValue = 1;
+
+  element.addEventListener('mousedown', function(event) {
+    if (event.button === 0) {
+      // Левая кнопка мыши
+      scaleValue += 0.1;
+    } else if (event.button === 2) {
+      // Правая кнопка мыши
+      scaleValue -= 0.1;
+
+      // Предотвращение стандартного контекстного меню
+      event.preventDefault();
+    }
+
+    // Применяем transform scale
+    element.style.transform = `scale(${scaleValue})`;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>
+      Собери матрешку
+    </title>
+  </head>
+  <body>
+    <div class="text1">Собери матрешку из готовых фигур! <br>
+    Начинай с самой маленькой</div>
+    <button onclick="location.href = './index.html';" class="exit">Выйти</button>
+
+    <div class="end_game" id="end-game-menu">
+      <div id="bad_ending">Ты проиграл..<br>
+        Попробуй еще раз!</div>
+      <div id="good_ending">Ты выиграл!<br>
+        Молодец!</div>
+        <h1 class="time">Общее время:</h1>
+        <h1 class="points">Количество очков:</h1>
+        <button onclick="location.href = './index.html';" class="exit" id="exit1">Выйти</button>
+        <button onclick="setupGame()" class="restart_game" class="restart_game" id="againButtonEnd"><img src="./images/restart.svg">Играть заново</button>
+    </div>
+
+    <div class="column">
+      <div class="conture" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+        <img src="./images/conture.svg" id="conture1">
+        <img src="./images/conture.svg" id="conture2">
+        <img src="./images/conture.svg" id="conture3">
+        <img src="./images/conture.svg" id="conture4">
+      </div>
+    </div>
+    <div class="container" id="container"></div>
+    <div id="timer">Время:</div>
+    <button onclick="setupGame()" class="restart_game" id="againButton"><img src="./images/restart.svg">Начать заново</button>
+    <script src="./script.js"></script>
+    <script src="./mode1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Задание 4
+    </title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/logo.css" />
+    <link rel="stylesheet" href="./CSS/words.css" />
+        <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+      />
+      <!-- ====== SCROLLREVEL CDN ======  -->
+      <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+     <!-- ====== HEADER ======  -->
+     <header class="header container">
+      <!-- ====== NAVBAR ======  -->
+      <nav class="navbar">
+         <!-- ====== LOGO ======  -->
+         <a href="index.html" class="logo">
+          <div class="figure1"></div>
+          <div class="figure2"></div>
+          <div class="figure3"></div>
+          <div class="figure4"></div>
+          <div class="figure5"></div>
+          <div class="figure6"></div>
+          <div class="figure7"></div>
+          <div class="figure8"></div>
+          <div class="figure9"></div>
+          <div class="figure10"></div>
+          <h2 class="name">Резиденция</h2>
+         </a>
+        <!-- ====== NAV MENU ======  -->
+        <div class="nav_menu">
+          <ul class="nav_menu_list">
+            <li class="nav_menu_list_item">
+              <a href="task1.html" class="nav_link" target="_blank">задание 1</a>
+            </li>
+            <li class="nav_menu_list_item">
+              <a href="task2.html" class="nav_link" target="_blank">задание 2</a>
+            </li>
+            <li class="nav_menu_list_item">
+              <a href="task3.html" class="nav_link" target="_blank">задание 3</a>
+            </li>
+            <li class="nav_menu_list_item">
+              <a href="task4.html" class="nav_link" target="_blank">задание 4</a>
+            </li>
+            <li>
+              <a href="coursework.html" class="contact_btn btn" target="_blank">Курсовая</a>
+            </li>
+          </ul>
+        </div>
+          <!-- ====== NAV MENU BUTTON ======  -->
+          <button class="nav_menu_btn">
+            <i class="bx bx-menu bx-sm"></i>
+          </button>
+        </nav>
+      </header>
+      <div class="task_1">
+        <h3 class="features_section_title section_title">
+          Слова
+        </h3>
+        <div class="top">
+          <div class="splited block" id="draggable-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="row">
+          <div class="left block" id="left" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="right">
+            <input type="text" id="inputString" placeholder="Введите строку">
+            <button class="split" onclick="processString()">Разобрать!</button>
+            <div id="top-text"></div>
+          </div>
+        </div>
+          <a href="index.html" class="contact_btn btn">На главную</a>
+          </div>
+        </div>
+      </div>
+      </section>
+        <!-- ====== FOOTER MENU WRAPPER ======  -->
+        <section class="footer_wrapper">
+          <div class="container-md">
+            <!-- ====== FOOTER ======  -->
+            <div class="footer">
+              <div class="footer_brand">
+                <div class="logo">
+                  <div class="figure1"></div>
+                  <div class="figure2"></div>
+                  <div class="figure3"></div>
+                  <div class="figure4"></div>
+                  <div class="figure5"></div>
+                  <div class="figure6"></div>
+                  <div class="figure7"></div>
+                  <div class="figure8"></div>
+                  <div class="figure9"></div>
+                  <div class="figure10"></div> 
+                </div>
+              </div>
+              <!-- ====== FOOTER MENU ======  -->
+              <div class="footer_menu">
+                <p class="footer_menu_title">project</p>
+                <a href="#" class="footer_menu_link">Главная</a>
+                <a href="#" class="footer_menu_link">Лучший выбор</a>
+                <a href="#" class="footer_menu_link">Лучшая локация</a>
+                <a href="#" class="footer_menu_link">Лучшая цена</a>
+              </div>
+              <!-- ====== FOOTER MENU ======  -->
+              <div class="footer_menu">
+                <p class="footer_menu_title">Сервисы</p>
+                <a href="#" class="footer_menu_link">Вопросы</a>
+                <a href="#" class="footer_menu_link">Как мы работаем</a>
+                <a href="#" class="footer_menu_link">Безопасность</a>
+              </div>
+              <!-- ====== FOOTER MENU ======  -->
+              <div class="footer_menu">
+                <p class="footer_menu_title">О нас</p>
+                <a href="#" class="footer_menu_link">Карьера</a>
+                <a href="#" class="footer_menu_link">Спонсоры</a>
+                <a href="#" class="footer_menu_link">Наш блог</a>
+              </div>
+              <!-- ====== FOOTER MENU ======  -->
+              <div class="footer_menu">
+                <p class="footer_menu_title">наши контакты</p>
+                <div class="footer_social">
+                  <a href="#" class="footer_social_link">
+                    <i class="bx bxl-instagram-alt bx-sm"></i>
+                  </a>
+                  <a href="#" class="footer_social_link">
+                    <i class="bx bxl-facebook-circle bx-sm"></i>
+                  </a>
+                  <a href="#" class="footer_social_link">
+                    <i class="bx bxl-twitter bx-sm"></i>
+                  </a>
+                  <a href="#" class="footer_social_link">
+                    <i class="bx bxl-reddit bx-sm"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        <footer>
+          <span>&copy; 2023 Ekaterina Toluzakova</span>
+        </footer>
+        <!-- ====== GSAP CDN  ======  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <!-- ====== SCRIPT.JS ======  -->
+        <script src="./js/words.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

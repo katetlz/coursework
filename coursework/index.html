@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>
+      Матрешки
+    </title>
+    </head>
+    <body>
+        <div class="start">
+            <img src="./images/name.svg" class="game"/>
+            <div class="name">
+              <h2>Имя</h2>
+              <input type="text" id="inputString" placeholder="Введите имя">
+            </div>
+            <div class="buttons">
+            <ul>
+              <button onclick="loadGame('./game1.html')" class="type1" id="button1">Собери</button>
+            </ul>
+            <ul>
+              <button onclick="loadGame('./game2.html')" class="type1" id="button2">Выбери</button>
+            </ul>
+            <ul>
+              <button onclick="loadGame('./game3.html')" class="type1" id="button3">Вырасти</button>
+            </ul>
+            
+            </div> 
+             <button class="rating_button"><img src="./images/rate.svg" alt="">Посмотреть рейтинг</button>
+            <img src="./images/ornament1.svg" class="ornament"/>
+    </div>
+
+    <script src="./script.js"></script>
+    </body>
+    
+</html>

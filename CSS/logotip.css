@@ -1,0 +1,77 @@
+
+.svg-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+  z-index: 1;
+  margin: auto;
+}
+.text{
+  position: absolute;
+  visibility: hidden;
+  left: 30%;
+  top: 95%;
+  z-index: 3;
+  color: rgb(95, 9, 128);
+}
+
+.letter {
+  z-index: 2;
+}
+
+.T {
+  position: absolute;
+  margin: 4%;
+  left:70%;
+  top:70%;
+}
+
+.E {
+  position: absolute;
+  left: -20%;
+  top:-20%;
+}
+
+
+.capy {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+}
+
+.object {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  left:-20%;
+  top:-20%;
+  visibility: hidden;
+  z-index: 3;
+}
+.moving {
+  visibility: visible;
+  offset-path: path("M0 6.21827C0 2.9148 2.67033 0.232771 5.97377 0.21833L49.8723 0.0264258C53.1962 0.0118951 55.8985 2.70241 55.8985 6.02637V22.9445C55.8985 26.2337 53.2503 28.9098 49.9612 28.9441L32.4928 29.1265V32.4618H49.8986C53.2123 32.4618 55.8985 35.1481 55.8985 38.4618V53.7227C55.8985 57.0364 53.2123 59.7227 49.8985 59.7227H32.4928V63.4977L51 63.4977C54.3137 63.4977 57 66.184 57 69.4977V85.9402C57 89.2539 54.3137 91.9402 51 91.9402L6 91.9401C2.68629 91.9401 0 89.2538 0 85.9401V6.21827Z");
+  animation: move 5s linear infinite;
+}
+
+.shaking {
+  animation: shake 0.6s ease infinite;
+}
+
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move {
+  to {
+    offset-distance: 100%;
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>
+      Вырасти матрешку
+    </title>
+  </head>
+  <body oncontextmenu="return false;">
+    <div class="text">Расставь матрешек так же, как в примере.<br>
+        Увеличивай и уменьшай их размер с помощью кнопок мыши!</div>
+    <button onclick="location.href = './index.html';" class="exit">Выйти</button>
+    <div class="rise_matryoshka" id="container">
+    </div>
+
+    <div class="end_game" id="end-game-menu">
+      <div id="bad_ending">Ты проиграл..<br>
+        Попробуй еще раз!</div>
+      <div id="good_ending">Ты выиграл!<br>
+        Молодец!</div>
+        <h1 class="time">Общее время:</h1>
+        <h1 class="points">Количество очков:</h1>
+        <button onclick="location.href = './index.html';" class="exit" id="exit1">Выйти</button>
+        <button onclick="setupGame()" class="restart_game" class="restart_game" id="againButtonEnd"><img src="./images/restart.svg">Играть заново</button>
+    </div>
+
+    <div class="example">Пример:<img id="example" src="./images/example1.svg"></div>
+    <div id="timer">Время:</div>
+    <button onclick="setupGame()" class="restart_game" id="againButton"><img src="./images/restart.svg">Начать заново</button>
+
+    <script src="./script.js"></script>
+    <script src="./mode3.js"></script>
+  </body>
+</html>
