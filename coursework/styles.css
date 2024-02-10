@@ -272,9 +272,18 @@ body {
     top: 20%;
     height: 100%;
     width: 70%;
+    display: flex;
     
 }
-
+.container1 {
+    position: absolute;
+    left: 0%;
+    top: 30%;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    
+}
 .end_game{
     position: absolute;
     top:20%;

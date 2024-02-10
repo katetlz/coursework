@@ -12,6 +12,34 @@ let questions = [
   {
     "question": "Собери всех матрешек с косынкой зеленого цвета или именем Даша как можно быстрее!",
     "correctAnswer": "Зеленый Даша"
+  },
+  {
+    "question": "Собери всех матрешек с косынкой фиолетового цвета или именем Катя как можно быстрее!",
+    "correctAnswer": "Фиолетовый Катя"
+  },
+  {
+    "question": "Собери всех матрешек с косынкой синего цвета как можно быстрее!",
+    "correctAnswer": "Синий"
+  },
+  {
+    "question": "Собери всех матрешек с именем Ксюша как можно быстрее!",
+    "correctAnswer": "Ксюша"
+  },
+  {
+    "question": "Собери всех матрешек с именем Ксюша или Даша как можно быстрее!",
+    "correctAnswer": "Ксюша Даша"
+  },
+  {
+    "question": "Собери всех матрешек с косынкой синего или желтого цвета как можно быстрее!",
+    "correctAnswer": "Синий Желтый"
+  },
+  {
+    "question": "Собери всех матрешек с косынкой синего или желтого цвета или с именем Катя как можно быстрее!",
+    "correctAnswer": "Синий Желтый Катя"
+  },
+  {
+    "question": "Собери всех матрешек с косынкой желтого цвета как можно быстрее!",
+    "correctAnswer": "Желтый"
   }
 ];
 let numsToColors = {
@@ -41,7 +69,7 @@ function setupGame(){
 
   const existingElements = document.querySelectorAll('.doll');
   existingElements.forEach(element => element.remove());
-  gameId = Math.floor(Math.random() * 3);
+  gameId = Math.floor(Math.random() * 10);
   document.getElementById('text-top').textContent = questions[gameId].question;
   let correctAns = questions[gameId].correctAnswer;
   let correctAmount = 0;

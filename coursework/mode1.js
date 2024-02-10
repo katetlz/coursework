@@ -40,7 +40,7 @@ function setupGame(){
   }
     
   for (let i = 0; i < 7; i++) {
-    if((i>2)&&(i<6)){
+    if((i>1)&&(i<6)){
       const element = document.createElement('img');
         element.src = './images/matryoshka' + (Math.floor(Math.random() * 5)+1) + '.svg';
         element.id = i;
