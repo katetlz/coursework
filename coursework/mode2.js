@@ -1,5 +1,4 @@
 let dollsNames = ["Даша", "Маша", "Ксюша", "Катя"];
-let dollsColors = ["Красный", "Зеленый", "Желтый", "Фиолетовый", "Синий"];
 
 let questions = [
   {
@@ -16,11 +15,11 @@ let questions = [
   }
 ];
 let numsToColors = {
-  "1":"фиолетовая",
-  "2": "зеленая",
-  "3": "синяя",
-  "4": "красная",
-  "5": "желтая"
+  "1":"Фиолетовый",
+  "2": "Зеленый",
+  "3": "Синий",
+  "4": "Красный",
+  "5": "Желтый"
 };
 
 const container = document.getElementById('container');
@@ -29,7 +28,12 @@ var goodEnding;
 var badEnding;
 let gameId = 0;
 
+document.addEventListener('DOMContentLoaded', function() {
+  setupGame();
+});
+
 function setupGame(){
+  setTimer();
   endGameMenu =  document.getElementById('end-game-menu');
   goodEnding = document.getElementById('good_ending');
   badEnding = document.getElementById('bad_ending');
@@ -45,23 +49,28 @@ function setupGame(){
 
 
   for (let i = 0; i < 7; i++) {
-    const element = document.createElement('img');
+    const element = document.createElement('div');
+    const image = document.createElement('img');
+    const nameTag = document.createElement('p');
     var color = (Math.floor(Math.random() * 5)+1);
-    element.src = './images/matryoshka' + color + '.svg';
+    image.src = './images/matryoshka' + color + '.svg';
     element.id = i;
-    element.textContent = dollsNames[Math.floor(Math.random() * 4)];
     element.className = 'doll';
     container.appendChild(element);
+    element.appendChild(image);
+    nameTag.textContent = dollsNames[Math.floor(Math.random() * 4)];
+    nameTag.style.textAlign = 'center';
+    element.appendChild(nameTag);
 
-    if(correctAns.includes(element.textContent) || correctAns.includes(color)){
+    
+    if(correctAns.includes(element.lastChild.textContent) || correctAns.includes(numsToColors[color])){
       correctAmount++;
     }
-    console.log(correctAmount);
 
     element.addEventListener('mousedown', function(event) {
-      let name = element.textContent;
-      let color = parseInt(element.src.split('matryoshka')[1]);
-      console.log(color);
+      let name = element.lastChild.textContent;
+      let color = parseInt(element.firstChild.src.split('matryoshka')[1]);
+      
 
       if(correctAns.includes(name) || correctAns.includes(numsToColors[color])){
         curAnswers++;
@@ -76,6 +85,7 @@ function setupGame(){
 }
 
 function endGame(mode){
+  endScore();
   endGameMenu.style.display = 'block';
   if(mode == 'win'){
     badEnding.style.display = 'none';

@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function setupGame(){
+  setTimer();
   endGameMenu =  document.getElementById('end-game-menu');
   goodEnding = document.getElementById('good_ending');
   badEnding = document.getElementById('bad_ending');
@@ -85,6 +86,7 @@ function setupGame(){
 }
 
 function endGame(mode){
+  endScore();
   endGameMenu.style.display = 'block';
   if(mode == 'win'){
     badEnding.style.display = 'none';

@@ -4,6 +4,56 @@ body {
     padding: 0;
     background: #FFF6F2;
   }
+
+  h1,h2, h3{
+    color: #6B0000
+  }
+
+  table {
+    position: absolute;
+    top:20%;
+    left: 15%;
+    font-family: arial, sans-serif;
+    border-collapse: separate;
+    width: 75%;
+  }
+  
+  td, th {
+    border: 3px solid #f4b9b9;
+    text-align: left;
+    font-size: 20px;
+    color: #6B0000;
+    padding: 8px;
+    width: 3%;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #ffe1e1;
+  }
+  
+  #text_rating{
+    position: absolute;
+    left: 43%;
+    top: 9%;
+}
+
+#home_button{
+    left: 30px;
+    top: 30px;
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    border-radius: 22px;
+    border: 2px solid #6B0000;
+    background: #EFC7BF;
+    font-family: "Arial", sans-serif;
+    font-size: 150%;
+    font-weight: 600;
+    color: #6B0000;
+    display: flex;
+    text-align: right;
+
+}
 .start{
     align-items: center;
     display: flex;
@@ -64,7 +114,7 @@ body {
     background: #d17878;
     scale: 1.03;
 }
-.rating_button{
+#rating_button{
     position: absolute;
     left: 70%;
     margin-top: 40px;
@@ -76,10 +126,12 @@ body {
     font-family: "Arial", sans-serif;
     font-size: 150%;
     font-weight: 600;
+    text-align: center;
+    line-height: 1.6;
     color: #6B0000;
 }
 
-.rating_button:hover{
+#rating_button:hover{
     background: #d17878;
     scale: 1.03;
 }
@@ -217,9 +269,10 @@ body {
 .container {
     position: absolute;
     left: 30%;
-    top: 0%;
+    top: 20%;
     height: 100%;
     width: 70%;
+    
 }
 
 .end_game{
@@ -303,4 +356,8 @@ body {
 
 .pos {
     position: absolute;
+}
+
+.doll {
+    width: fit-content;
 }
